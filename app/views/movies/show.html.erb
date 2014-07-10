@@ -14,12 +14,12 @@
   </p>
   <p>
     <strong>"Localização da Foto" </strong>
-    <%= @movie.foto %>
-  </p>
+    <%= image_tag @movie.video.url(:thumb) %>
+ </p>
   <p>
-    <strong>"Localização do Filme" </strong>
-    <%= @movie.video %>
+    <%= video_tag([@movie.video.url(:mpg4), @movie.video.url(:ogg)], :size => "800x600", :controls => true, :autobuffer => true, poster: @movie.video.url(:thumb)) %>
   </p>
+  <%= video_tag @movie.video.url(:ogg), controls: true, type: "video/ogg", size: "400x400" %>
    <p>
     <strong>text </strong>
     <%= @movie.description %>

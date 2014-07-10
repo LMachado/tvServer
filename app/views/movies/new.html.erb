@@ -1,6 +1,6 @@
 <h1>Novo Filme</h1>
 <br>
-<%= form_for :movie , url: movies_path do |f| %>
+<%= form_for :movie, url: movies_path, :html => { :multipart => true } do |f| %>
   <p>
 
 

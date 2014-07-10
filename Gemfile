@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 1.2'
 
 #para carregar fotos e videos
 gem "paperclip", "~> 4.1"
+gem "paperclip-ffmpeg"
 
 #trata de permissoes
 gem "cancan"

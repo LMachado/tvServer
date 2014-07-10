@@ -11,18 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617214512) do
+ActiveRecord::Schema.define(version: 20140704115254) do
 
   create_table "movies", force: true do |t|
     t.string   "title"
     t.integer  "duration"
     t.string   "age"
     t.string   "integer"
-    t.string   "foto"
     t.string   "video"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
+    t.string   "video_file_name"
+    t.string   "video_content_type"
+    t.integer  "video_file_size"
+    t.datetime "video_updated_at"
   end
 
   create_table "users", force: true do |t|

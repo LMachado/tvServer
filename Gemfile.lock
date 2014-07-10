@@ -62,6 +62,9 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    paperclip-ffmpeg (1.2.0)
+      paperclip (>= 2.5.2)
+      rails
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -123,6 +126,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   paperclip (~> 4.1)
+  paperclip-ffmpeg
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc

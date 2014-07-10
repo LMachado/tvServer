@@ -3,14 +3,12 @@ class MoviesController < ApplicationController
 	end
 
 	def create
-		
-		@newMovie = Movie.new
+		@newMovie = Movie.create(movie_params)
 		@newMovie.title = params[:movie][:title]
 		@newMovie.duration = params[:movie][:time]
 		@newMovie.age = params[:movie][:age]
-		@newMovie.foto = params[:movie][:foto].original_filename
-		@newMovie.video = params[:movie][:video].original_filename
 		@newMovie.description = params[:movie][:description]
+		
 		@newMovie.save
 		redirect_to @newMovie	 
 	end
@@ -22,6 +20,11 @@ class MoviesController < ApplicationController
 
 
 	private
+
+	def movie_params
+  		params.require(:movie).permit(:foto)
+  		params.require(:movie).permit(:video)
+	end
 
 	def dur (time)
 		mins = time % 60
